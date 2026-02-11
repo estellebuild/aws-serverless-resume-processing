@@ -1,5 +1,10 @@
 # AWS Serverless Resume Processing System
 
+![AWS](https://img.shields.io/badge/AWS-Serverless-orange?logo=amazonaws&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-Event--Driven-success)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
 A secure, cost-efficient, event-driven resume processing pipeline built entirely on managed AWS services.
 
 ---
