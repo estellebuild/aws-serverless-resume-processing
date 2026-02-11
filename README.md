@@ -25,9 +25,13 @@ The architecture is designed to scale automatically while minimizing operational
 
 ### Logical Architecture
 
+Below is the high-level logical architecture of the system:
+
 ![Logical Architecture](./Cloud%20Logical%20Architecture.png)
 
 ### Runtime Execution Flow
+
+The following diagram illustrates the runtime execution flow after a resume is uploaded:
 
 ![Runtime Flow](./Cloud%20Runtime%20Architecture%20%28execution%20flow%20recap%29.png)
 
