@@ -147,7 +147,9 @@ S3 events triggered correctly and DynamoDB records appeared immediately.
 
 ## Author
 
-Estelle F.  
-Cloud Engineering Student | AWS Certified | Building in Public 🚀
+**Estelle F.** 
+Cloud Support Associate | AWS Certified x3 | Cloud & AI Systems
+LinkedIn: https://www.linkedin.com/in/estellets
+ 
 
 
