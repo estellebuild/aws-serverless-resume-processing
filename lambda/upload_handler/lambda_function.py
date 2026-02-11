@@ -1,3 +1,13 @@
+"""
+Lambda Upload Handler
+
+- Validates file type
+- Decodes base64 file input
+- Stores object securely in S3 under uploads/ prefix
+- Designed for serverless, event-driven architectures
+"""
+
+
 import json
 import os
 import base64
