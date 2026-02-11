@@ -1,12 +1,12 @@
 # AWS Serverless Resume Processing System
 
-Secure, cost-efficient, event-driven document processing pipeline built on AWS using managed, pay-per-use services.
+A secure, cost-efficient, event-driven resume processing pipeline built entirely on managed AWS services.
 
 ---
 
 ## Overview
 
-This project demonstrates how to design and implement a production-minded, serverless architecture for processing resumes securely and efficiently.
+This project demonstrates the design and implementation of a production-minded, serverless architecture for securely and efficiently processing resume documents.
 
 The system automatically:
 
@@ -18,6 +18,22 @@ The system automatically:
 - Emits logs and metrics to CloudWatch for observability
 
 The architecture is designed to scale automatically while minimizing operational overhead and idle cost.
+
+---
+
+## Why This Project Matters
+
+This project demonstrates:
+
+- Designing secure, serverless cloud architectures using AWS
+- Implementing event-driven workflows with S3 and Lambda
+- Applying least-privilege IAM principles
+- Integrating managed AI services (Amazon Textract)
+- Building observable, cost-efficient production-ready systems
+- Investigating and resolving real-world configuration issues in distributed systems
+
+The architecture scales automatically, incurs cost only on usage, and follows cloud-native design best practices.
+
 
 ---
 
@@ -34,30 +50,6 @@ Below is the high-level logical architecture of the system:
 The following diagram illustrates the runtime execution flow after a resume is uploaded:
 
 ![Runtime Flow](./Cloud%20Runtime%20Architecture%20%28execution%20flow%20recap%29.png)
-
----
-
-## AWS Services Used
-
-- **Amazon API Gateway** – Secure HTTPS entry point
-- **AWS Lambda** – Upload handler and document processor
-- **Amazon S3** – Encrypted object storage and event source
-- **Amazon DynamoDB** – Metadata persistence (on-demand billing)
-- **Amazon Textract** – Asynchronous AI document analysis
-- **Amazon CloudWatch** – Logging and monitoring
-
----
-
-## Security Design
-
-- Block Public Access enabled on S3
-- Server-side encryption (SSE-S3) enabled by default
-- S3 Bucket Key enabled for optimized encryption operations
-- Least-privilege IAM roles for each Lambda function
-- Separation of upload and processing execution roles
-- No broad managed policies (e.g., no `AmazonS3FullAccess`)
-
-Security boundaries are enforced by design, not convention.
 
 ---
 
@@ -78,21 +70,46 @@ No polling. No idle infrastructure. Fully reactive.
 
 ---
 
+## Security Design
+
+- Block Public Access enabled on S3
+- Server-side encryption (SSE-S3) enabled by default
+- S3 Bucket Key enabled for optimized encryption operations
+- Least-privilege IAM roles for each Lambda function
+- Separation of upload and processing execution roles
+- No broad managed policies (e.g., no `AmazonS3FullAccess`)
+
+Security boundaries are enforced by design, not convention.
+
+---
+
 ## Cost Optimization
 
 - Fully serverless (no EC2, no always-on compute)
 - DynamoDB on-demand billing
 - Lambda pay-per-request compute
 - Asynchronous Textract invocation
-- Full resource cleanup after validation
+- Dependency-aware resource cleanup to prevent unnecessary AWS charges
 
 Designed for bursty, small-business workloads.
 
 ---
 
+## Technical Highlights
+
+- API Gateway secure HTTPS endpoint for controlled ingestion
+- Lambda-based upload validation and storage
+- S3 event notifications for automatic downstream triggering
+- Asynchronous Textract integration
+- DynamoDB metadata tracking (on-demand capacity)
+- CloudWatch logging for observability and debugging
+- Full resource cleanup to prevent unnecessary AWS charges
+
+---
+
 ## Debugging Insight
 
-During testing, DynamoDB remained empty even though the processing Lambda executed.
+During integration testing, DynamoDB remained empty despite successful Lambda execution.
 
 ### Investigation Steps
 
@@ -125,6 +142,17 @@ S3 events triggered correctly and DynamoDB records appeared immediately.
 
 ---
 
+## AWS Services Used
+
+- **Amazon API Gateway** – Secure HTTPS entry point
+- **AWS Lambda** – Upload handler and document processor
+- **Amazon S3** – Encrypted object storage and event source
+- **Amazon DynamoDB** – Metadata persistence (on-demand billing)
+- **Amazon Textract** – Asynchronous AI document analysis
+- **Amazon CloudWatch** – Logging and monitoring
+
+---
+
 ## Key Engineering Principles Demonstrated
 
 - Serverless architecture
@@ -148,8 +176,10 @@ S3 events triggered correctly and DynamoDB records appeared immediately.
 ## Author
 
 **Estelle F.** 
-Cloud Support Associate | AWS Certified x3 | Cloud & AI Systems
-LinkedIn: https://www.linkedin.com/in/estellets
- 
+## Author
 
+**Estelle F.**  
+Cloud Support Engineer Candidate | AWS Certified (3x) | Cloud & AI Systems  
+
+LinkedIn: https://www.linkedin.com/in/estellets
 
