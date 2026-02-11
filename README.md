@@ -4,6 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
 ![Architecture](https://img.shields.io/badge/Architecture-Event--Driven-success)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Cloud](https://img.shields.io/badge/Cloud-AWS-yellow?logo=amazonaws&logoColor=white)
 
 A secure, cost-efficient, event-driven resume processing pipeline built entirely on managed AWS services.
 
