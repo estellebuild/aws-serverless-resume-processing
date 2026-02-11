@@ -25,11 +25,11 @@ The architecture is designed to scale automatically while minimizing operational
 
 ### Logical Architecture
 
-![Logical Architecture](Cloud Logical Architecture.png)
+![Logical Architecture](./Cloud%20Logical%20Architecture.png)
 
 ### Runtime Execution Flow
 
-![Runtime Flow](Cloud Runtime Architecture (execution flow ...).png)
+![Runtime Flow](./Cloud%20Runtime%20Architecture%20%28execution%20flow%20recap%29.png)
 
 ---
 
