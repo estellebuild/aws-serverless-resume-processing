@@ -175,9 +175,6 @@ S3 events triggered correctly and DynamoDB records appeared immediately.
 
 ## Author
 
-**Estelle F.** 
-## Author
-
 **Estelle F.**  
 Cloud Support Engineer Candidate | AWS Certified (3x) | Cloud & AI Systems  
 
